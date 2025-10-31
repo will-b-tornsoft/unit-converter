@@ -112,7 +112,7 @@ class BinaryCalculator extends AbstractCalculator
      */
     private static function product(string $value): string
     {
-        return (false !== stristr($value, '.')) ? rtrim($value, '0.,') : $value;
+        return (false !== stristr($value, '.')) ? rtrim(rtrim($value, '0'), '.,') : $value;
     }
 
     /**
